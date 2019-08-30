@@ -2,15 +2,15 @@
 
 With thanks to our friends at [18f](https://github.com/18F) for the [inspiration](https://github.com/18F/dns), this repository is a collection of Terraform scripts for configuring DNS for domains managed by CDS.
 
-Currently this is limited to managing subdomains of *.cds-snc.ca.  In future, we will expand to include the cdssandbox.xyz domain.
+Currently this is limited to managing subdomains of *.cds-snc.ca and *.alpha.canada.ca.  In the future, we hope to expand it to include the *.beta.canada.ca and *.service.canada.ca domains to align with our phases of delivery.
 
 ## Why would I need this?
 
-Do you want a pretty URL like `something.cds-snc.ca` for your cool new project?  This is how you do that.
+Do you want a pretty URL like `notification.alpha.canada.ca` for your cool new project?  This is how you do that.
 
 ## Making DNS requests
 
-To request a new subdomain, create a `aws_route53_record` terraform entry and submit a pull request.  A member of the Platform team should review the change and approve it.
+To request a new subdomain, create an `aws_route53_record` terraform entry and submit a pull request.  A member of the Platform team should review the change and approve it.
 
 On merge, changes are deployed to Route53 automatically by a CircleCI job.
 
